@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEKOU ENGINE - Transform</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="container">
+        <header class="neu-card">
+            <h1 class="neon-text">Transform</h1>
+            <p>空間における位置・回転・大きさを管理する必須コンポーネント</p>
+        </header>
+        <main class="neu-card">
+            <h2 class="neon-text">Properties</h2>
+            <ul>
+                <li><code>position / rotation / scale</code><br>3次元空間内の基本ベクトル値。</li>
+            </ul>
+            <h2 class="neon-text">Methods</h2>
+            <h3 class="neon-text">setPosition(x, y, z)</h3>
+            <p>ワールド座標系での位置を直接指定します。</p>
+            <h3 class="neon-text">setRotation(degX, degY, degZ)</h3>
+            <p>度数法（Degree）を用いて回転を指定します。ラジアン計算を意識せず直感的な制御が可能です。</p>
+            <h3 class="neon-text">reset()</h3>
+            <p>位置・回転を初期状態、スケールを1に戻します。</p>
+        </main>
+    </div>
+    <script src="../../shader.js"></script>
+</body>
+
+</html>

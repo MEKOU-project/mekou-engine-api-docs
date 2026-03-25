@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEKOU ENGINE - Audio</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="container">
+        <header class="neu-card">
+            <h1 class="neon-text">Audio</h1>
+            <p>オーディオ再生と制御を行うコンポーネント</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../../index.html" class="nav-link">HOME</a>
+            <a href="../thought.html" class="nav-link">THOUGHT</a>
+            <a href="../API_func.html" class="nav-link active">API</a>
+            <a href="../APP_samples.html" class="nav-link">SAMPLES</a>
+            <a href="../Progress.html" class="nav-link">PROGRESS</a>
+        </nav>
+
+        <main class="neu-card">
+            <h2 class="neon-text">Properties</h2>
+            <ul>
+                <li><code>audioUrl: string</code><br>再生するオーディオのURL</li>
+            </ul>
+
+            <h2 class="neon-text">Methods</h2>
+            <h3 class="neon-text">play()</h3>
+            <p>オーディオの再生を開始します。</p>
+
+            <h3 class="neon-text">pause()</h3>
+            <p>オーディオの再生を一時停止します。</p>
+
+            <h3 class="neon-text">stop()</h3>
+            <p>オーディオの再生を停止し、再生位置を初期化します。</p>
+
+            <h3 class="neon-text">setVolume(volume: number)</h3>
+            <p>音量を設定します。</p>
+
+            <h3 class="neon-text">setLoop(loop: boolean)</h3>
+            <p>ループ再生の有効・無効を設定します。</p>
+        </main>
+    </div>
+
+    <script src="../../shader.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEKOU ENGINE - Material</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="container">
+        <header class="neu-card">
+            <h1 class="neon-text">Material</h1>
+            <p>オブジェクトの表面特性（色、不透明度）を定義・制御するコンポーネント</p>
+        </header>
+
+        <nav class="nav">
+            <a href="../../index.html" class="nav-link">HOME</a>
+            <a href="../thought.html" class="nav-link">THOUGHT</a>
+            <a href="../API_func.html" class="nav-link active">API</a>
+            <a href="../APP_samples.html" class="nav-link">SAMPLES</a>
+            <a href="../Progress.html" class="nav-link">PROGRESS</a>
+        </nav>
+
+        <main class="neu-card">
+            <h2 class="neon-text">Properties</h2>
+            <ul>
+                <li><code>color: { r: number, g: number, b: number }</code><br>現在のマテリアルのRGBカラー値（0.0〜1.0）。</li>
+            </ul>
+
+            <h2 class="neon-text">Methods</h2>
+
+            <h3 class="neon-text">setColor(r: number, g: number, b: number)</h3>
+            <p>マテリアルの色を更新します。リアルタイムな色の変化（ハイライト反応など）に使用されます。</p>
+
+            <h3 class="neon-text">setOpacity(opacity: number)</h3>
+            <p>オブジェクトの不透明度を設定します。0.0（完全透明）から1.0（不透明）の範囲で指定可能です。</p>
+        </main>
+
+        <main class="neu-card" style="margin-top: 2rem;">
+            <h2 class="neon-text">Usage Example</h2>
+            <p>RaycastTargetと組み合わせることで、視線が合った瞬間に <code>setColor()</code> を呼び出し、ネオンのように発光させる演出などが可能です。</p>
+        </main>
+    </div>
+
+    <script src="../../shader.js"></script>
+</body>
+
+</html>

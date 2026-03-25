@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="container">
+        <header class="neu-card">
+            <h1 class="neon-text">API FUNCTION</h1>
+            <p></p>
+        </header>
+
+        <nav class="nav">
+            <a href="../index.html" class="nav-link">HOME</a>
+            <a href="./thought.html" class="nav-link">THOUGHT</a>
+            <a href="./API_func.html" class="nav-link active">API</a>
+            <a href="./APP_samples.html" class="nav-link">SAMPLES</a>
+            <a href="./Progress.html" class="nav-link">PROGRESS</a>
+        </nav>
+
+        <main class="neu-card">
+            <h2 class="neon-text">Component System</h2>
+            <div class="jomon-motif">「断片を編み、理を成す」</div>
+
+            <p>MEKOU ENGINEのAPIリファレンスです。各コンポーネントとインターフェースの詳細はリンク先を参照してください。</p>
+
+            <h3 class="neon-text">Core API Usage</h3>
+            <p>すべてのコンポーネントの基本となる操作例です。</p>
+            <pre><code>// 新しいオブジェクトを作成
+const go = this.objectManager.createObject("object_id");
+
+// コンポーネントを追加
+entity.addComponent<Transform>("Transform");
+
+// コンポーネントを取得して操作
+const transform = entity.getComponent<Transform>("Transform");
+transform.position?.set(10, 0, 5);</code></pre>
+
+            <h3 class="neon-text">Interfaces & Components</h3>
+            <p>標準で提供されるインターフェースとコンポーネントの一覧です。</p>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+
+                <a class="neu-card" href="./api/IGameObjectManager.html">IGameObjectManager</a>
+                <a class="neu-card" href="./api/Audio.html">Audio</a>
+                <a class="neu-card" href="./api/Clickable.html">Clickable</a>
+                <a class="neu-card" href="./api/Grabbable.html">Grabbable</a>
+                <a class="neu-card" href="./api/Material.html">Material</a>
+                <a class="neu-card" href="./api/Mesh.html">Mesh</a>
+                <a class="neu-card" href="./api/RigidBody.html">RigidBody</a>
+                <a class="neu-card" href="./api/Transform.html">Transform</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="../shader.js"></script>
+</body>
+
+</html>

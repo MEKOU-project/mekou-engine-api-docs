@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEKOU ENGINE - RigidBody</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="container">
+        <header class="neu-card">
+            <h1 class="neon-text">RigidBody</h1>
+            <p>物理演算を適用し、質量や力を制御するコンポーネント</p>
+        </header>
+        <main class="neu-card">
+            <h2 class="neon-text">Properties</h2>
+            <ul>
+                <li><code>mass: number</code><br>オブジェクトの質量。0に設定すると静的（固定）オブジェクトになります。</li>
+            </ul>
+            <h2 class="neon-text">Methods</h2>
+            <h3 class="neon-text">applyForce(force)</h3>
+            <p>継続的な力を加えます。風やエンジンの推進力などに使用します。</p>
+            <h3 class="neon-text">applyImpulse(impulse)</h3>
+            <p>瞬間的な衝撃を加えます。衝突やジャンプのトリガーに最適です。</p>
+            <h3 class="neon-text">setFriction(friction)</h3>
+            <p>摩擦係数を設定し、滑りにくさを調整します。</p>
+        </main>
+    </div>
+    <script src="../../shader.js"></script>
+</body>
+
+</html>

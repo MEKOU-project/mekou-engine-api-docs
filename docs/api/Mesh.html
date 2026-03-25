@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEKOU ENGINE - Mesh</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="container">
+        <header class="neu-card">
+            <h1 class="neon-text">Mesh</h1>
+            <p>3Dモデルの形状やジオメトリを定義するコンポーネント</p>
+        </header>
+        <main class="neu-card">
+            <h2 class="neon-text">Properties</h2>
+            <ul>
+                <li><code>modelUrl: string</code><br>外部からロードする3Dモデルのパス。</li>
+            </ul>
+            <h2 class="neon-text">Methods</h2>
+            <h3 class="neon-text">setModel(url: string)</h3>
+            <p>外部モデルファイルを非同期でロードし、メッシュとして設定します。</p>
+            <h3 class="neon-text">setPlaneGeometry(width, height)</h3>
+            <p>即座に平面（板ポリゴン）を生成します。UIや地面の作成に有効です。</p>
+            <h3 class="neon-text">setBoxGeometry(x, y, z)</h3>
+            <p>指定したサイズのボックス形状を生成します。</p>
+        </main>
+    </div>
+    <script src="../../shader.js"></script>
+</body>
+
+</html>
