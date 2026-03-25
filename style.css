@@ -1,122 +1,42 @@
 :root {
-    --bg-color: #0d0d0d;
-    --card-bg: #1a1a1a;
-    --shadow-light: rgba(255, 255, 255, 0.05);
-    --shadow-dark: rgba(0, 0, 0, 0.8);
-    --neon-blue: #00f3ff;
-    --neon-purple: #bc13fe;
-    --text-color: #e0e0e0;
+    --neon-blue: #00f2ff;
+    --bg-dark: rgba(10, 10, 15, 0.8);
+    --text-main: #e0e0e0;
+    --glass-border: rgba(0, 242, 255, 0.2);
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    overflow-x: hidden;
-}
-
-#bg-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
+    background-color: #050508; /* シェーダーの下地 */
+    color: var(--text-main);
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
 }
 
 .neu-card {
-    border-left: 4px solid #00ffff; /* 左側にネオンのラインを入れるだけで締まる */
-    background: rgba(20, 20, 25, 0.85); /* 透過度を下げて可読性を確保 */
-    backdrop-filter: blur(10px); /* 背後のシェーダーを程よくぼかす */
+    background: var(--bg-dark);
+    backdrop-filter: blur(12px); /* これが「清潔感」の正体 */
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
 }
 
 .neon-text {
     color: var(--neon-blue);
-    text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
-    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.5);
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
 }
 
-.nav {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 10px 20px;
-    border-radius: 10px;
-    background: var(--card-bg);
-    box-shadow: 5px 5px 10px var(--shadow-dark),
-                -2px -2px 5px var(--shadow-light);
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
-}
-
-.nav-link:hover {
-    box-shadow: inset 5px 5px 10px var(--shadow-dark),
-                inset -2px -2px 5px var(--shadow-light);
-    color: var(--neon-blue);
-    border: 1px solid var(--neon-blue);
-}
-
-.nav-link.active {
-    color: var(--neon-purple);
-    border: 1px solid var(--neon-purple);
-    box-shadow: 0 0 10px var(--neon-purple);
-}
-
-h1, h2, h3 {
-    margin-top: 0;
-}
-
-p {
-    line-height: 1.6;
-    color: #ccc;
-}
-
+/* APIの型定義（ここが一番おしゃれに見えるポイント） */
 code {
-    background: rgba(0, 255, 255, 0.1);
-    color: #00ffff;
-    padding: 2px 6px;
+    font-family: 'Fira Code', 'Cascadia Code', monospace;
+    background: rgba(0, 242, 255, 0.05);
+    color: var(--neon-blue);
+    padding: 0.2rem 0.4rem;
     border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
-    border: 1px solid rgba(0, 255, 255, 0.3);
-}
-
-pre {
-    background: #000;
-    padding: 15px;
-    border-radius: 10px;
-    overflow-x: auto;
-    border: 1px solid var(--neon-purple);
-}
-
-.qr-code {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin: 20px auto;
-    filter: drop-shadow(0 0 10px var(--neon-blue));
-}
-
-.jomon-motif {
-    font-size: 0.8em;
-    opacity: 0.5;
-    font-style: italic;
-    border-left: 2px solid var(--neon-purple);
-    padding-left: 10px;
-    margin: 10px 0;
+    font-size: 0.9em;
 }
